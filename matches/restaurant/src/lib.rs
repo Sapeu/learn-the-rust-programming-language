@@ -1,15 +1,5 @@
-mod front_of_house {
-    pub mod hosting {
-        pub fn add_to_waitlist(){}
-        fn seat_at_table(){}
-    }
-
-    mod serving {
-        fn take_order(){}
-        fn server_order(){}
-        fn take_payment(){}
-    }
-}
+mod front_of_house;
+pub use front_of_house::hosting;
 
 mod back_of_house {
     pub enum Appetizer {
@@ -38,8 +28,6 @@ mod back_of_house {
 
     fn cook_order() {}
 }
-
-pub use front_of_house::hosting;
 
 pub fn eat_at_resaurant() {
     hosting::add_to_waitlist();
