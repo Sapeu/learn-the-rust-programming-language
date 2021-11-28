@@ -39,7 +39,13 @@ mod back_of_house {
     fn cook_order() {}
 }
 
+pub use front_of_house::hosting;
+
 pub fn eat_at_resaurant() {
+    hosting::add_to_waitlist();
+    hosting::add_to_waitlist();
+    hosting::add_to_waitlist();
+
     let order1 = back_of_house::Appetizer::Soup;
     let order2 = back_of_house::Appetizer::Salad;
 
